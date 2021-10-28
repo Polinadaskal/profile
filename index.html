@@ -2,88 +2,125 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Даскал Полина-официальный сайт</title>
+    <link rel="stylesheet" href="style.css">
+    <title>CSS оформление</title>
     <style>
         html, body {
             margin: 0;
             padding: 0;
         }
-    header {
-        height: 100px;
-        display:flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .fixed-container {
-        padding-left: 80px;
-        padding-right: 80px;
-        margin-left: auto ;
-        margin-right: auto;
-        width: 840px;
-    }
-    nav a {
-        margin-right: 20px;
+        header {
+            margin-right: auto;
+            margin-left: auto;
+            width: 100%;
+            background-color: rgb(138, 135, 135);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #ffffff; 
+            font-style: italic;
+           }
+        div.header-logo {
+            width: 80%;
+            margin-left: 50px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        div.header-main {
+           margin-right: 30%;
+           width: 900px;
+        }
+        div.header-login {
+            color: white;
+            margin-left: 40px;
+            margin-right: 40px;
+            justify-content: space-between;
         
-    }
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    a:hover {
-        text-decoration: underline;
-    }
-    .light-button{
-        background-color: white;
-        border: 1px solid gray;
-        border-radius: 5px;
-        padding-top: 10px;
-        padding-right: 30px;
-        padding-left: 30px;
-        padding-bottom: 10px;
-    }
-    .dark-button{
-        background-color: rgb(58, 78, 196);
-        border: 1px solid gray;
-        border-radius: 5px;
-        padding-top: 10px;
-        padding-right: 30px;
-        padding-left: 30px;
-        padding-bottom: 10px;
-        color: white;
-       
-    }
-    .first-block {
-        height: 600px;
-        background-image: url('image1.png');
-        background-repeat: no-repeat;
-        background-position: right center;
-        background-size: 600px 550px;
+        }
+        section {
+            background-color: rgb(94, 77, 65);
+            margin-right: auto;
+            margin-left: auto;
+        }
+        div.header-spisok {
+            color: white;
+            width: 400px;
+        }
+      
         
-    }
-    
+        
     </style>
 </head>
 <body>
-    <header class="fixed-container">
-        <nav>
-            <a href="#">Услуги</a>
-            <a href="#">Портфолио</a>
-            <a href="#">Стоимость</a>
-        </nav>
-        <div>
-            <a href="tel:+79146976201">+7 (914) 697-62-01</a>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="light-button">Заказать звонок</button>
+    <header>
+        <div class="header-logo">
+            <img src="../images/css.svg" width="10%">
+        </div>
+        <div class="header-main">
+            <h1>Мой сайт-мой дизайн</h1>
         </div>
         
+       <div class="header-login">
+          Логин
+          &nbsp;&nbsp; &nbsp;&nbsp;
+          Пароль
+       </div>
+        
+        
     </header>
-    <section class="fixed-container first-block">
-        <h1>Даскал Полина</h1>
-        <button class="dark-button">Узнать больше</button>
+    <section>
+        <nav>
+            <a style="color: rgb(247, 247, 247);" href="../index.html">Главная страница</a>
+                    
+                    
+            <a style="color: rgb(255, 255, 255);" href="css.html">CSS оформление</a>
+        
+        
+            <a style="color: rgb(255, 255, 255);" href="JS.html">JS программирование</a></td>
 
-    </section>
-    <section class="fixed-container">
+        </nav> 
+        <div class="header-spisok">Список товарищей</div>  
+         <p>
+                    CSS - это язык оформления HTML-документов. За более подробной информацией <a  href="https://ru.wikipedia.org/wiki/CSS">сюда.</a>  
+                    Так как он является вспомогательным языком, 
+                    то существует несколько основных способов его добавления на web-страницу:
+                </p>           
+                <p>
+                  <li>
+                    Внешний &lt;link rel="stylesheet" href="style.css"&gt;
+                </li>
+                   <li>
+                       Внутренний глобальный &lt;style&gt;&lt;/style &gt;
+                </li> 
+                  <li>
+                      Внутренний локальный &lt;span style="color: red"&gt;&lt;/span&gt;
+                  </li>     
+                </p>
+             <p>
+                    Синтаксис языка выглядит следующим образом: сначала указывается изменяемый элемент 
+                    с помощью  селектора , после этого в фигурных скобках перечисляются через точку с запятой изменяемые свойства элемента 
+                    (цвет, размер, расположение и т.д.), затем напротив каждого свойства 
+                    указывается значение (red, left, 1px и т.д.). Например:
+                </p> 
+                <span>
+                    table  {<br>
+                        width: 80%;<br>
+                        border-color: white;<br>
+                        border-style: groove;<br>
+                        border-width: 5px;<br>
+                    }
+                </span>
+            <p>
+                    В ситуации когда изменить необходимо только некоторые элементы, следует пользоваться указателями класса: когда одни и теже теги принадлежат разным классам и оформляются по разному.
+                   <p>
+                       &lt;table class="header"&gt;&lt;/table&gt; <br>
+                   &lt;table class="main"&gt;&lt;/table&gt;
+                   </p> 
+                    
+                </p>
+                    
+            </section>
 
-    </section>
-</body>
-</html>
